@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  wotedama_alpha
+
+  Created by 大川　明日香 on 2024/10/17.
+  
+*/
+
+CFBundleName = "wotedama";
+
+com.apple.inputmethod.Roman = "wotedama (English)";
+com.apple.inputmethod.Japanese = "wotedama (日本語)";

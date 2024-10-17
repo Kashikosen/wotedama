@@ -1,0 +1,686 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17833EE22CC0DD3100CAB531 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17833EDB2CC0DD3100CAB531 /* Preview Assets.xcassets */; };
+		17833EE42CC0DD3100CAB531 /* LogMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17833EDE2CC0DD3100CAB531 /* LogMessage.swift */; };
+		17833EE52CC0DD3100CAB531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17833EE02CC0DD3100CAB531 /* AppDelegate.swift */; };
+		17833EE82CC0DDD200CAB531 /* wotedamaInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17833EE72CC0DDCD00CAB531 /* wotedamaInputController.swift */; };
+		17833EED2CC0DED500CAB531 /* SocketConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17833EEC2CC0DEB700CAB531 /* SocketConnection.swift */; };
+		17833EF12CC0E5D300CAB531 /* KeyMap+hankaku2zenkaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17833EF02CC0E5D000CAB531 /* KeyMap+hankaku2zenkaku.swift */; };
+		17833EF52CC0E63300CAB531 /* NSRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17833EF42CC0E62400CAB531 /* NSRange.swift */; };
+		17833EF92CC0EBA100CAB531 /* KanaKanjiConverterModuleWithDefaultDictionary in Frameworks */ = {isa = PBXBuildFile; productRef = 17833EF82CC0EBA100CAB531 /* KanaKanjiConverterModuleWithDefaultDictionary */; };
+		17833EFB2CC0EBAA00CAB531 /* SwiftUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 17833EFA2CC0EBAA00CAB531 /* SwiftUtils */; };
+		17833EFC2CC0EC2100CAB531 /* KeyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17833EF22CC0E5FF00CAB531 /* KeyMap.swift */; };
+		17833F002CC1011800CAB531 /* main.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 17833EFF2CC1011800CAB531 /* main.tiff */; };
+		17833F022CC1012000CAB531 /* en.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 17833F012CC1012000CAB531 /* en.tiff */; };
+		17833F0A2CC1036300CAB531 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17833EE92CC0DE1F00CAB531 /* InfoPlist.strings */; };
+		17833F0B2CC1037100CAB531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17833EDD2CC0DD3100CAB531 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17833EBF2CC0DD2A00CAB531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17833EA52CC0DD2900CAB531 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17833EAC2CC0DD2900CAB531;
+			remoteInfo = wotedama_alpha;
+		};
+		17833EC92CC0DD2A00CAB531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17833EA52CC0DD2900CAB531 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17833EAC2CC0DD2900CAB531;
+			remoteInfo = wotedama_alpha;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17833EAD2CC0DD2900CAB531 /* wotedama_alpha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wotedama_alpha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17833EBE2CC0DD2A00CAB531 /* wotedama_alphaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wotedama_alphaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17833EC82CC0DD2A00CAB531 /* wotedama_alphaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wotedama_alphaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17833EDB2CC0DD3100CAB531 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		17833EDD2CC0DD3100CAB531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17833EDE2CC0DD3100CAB531 /* LogMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMessage.swift; sourceTree = "<group>"; };
+		17833EDF2CC0DD3100CAB531 /* wotedama.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wotedama.entitlements; sourceTree = "<group>"; };
+		17833EE02CC0DD3100CAB531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17833EE62CC0DD9300CAB531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		17833EE72CC0DDCD00CAB531 /* wotedamaInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wotedamaInputController.swift; sourceTree = "<group>"; };
+		17833EEA2CC0DE1F00CAB531 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		17833EEC2CC0DEB700CAB531 /* SocketConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketConnection.swift; sourceTree = "<group>"; };
+		17833EF02CC0E5D000CAB531 /* KeyMap+hankaku2zenkaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyMap+hankaku2zenkaku.swift"; sourceTree = "<group>"; };
+		17833EF22CC0E5FF00CAB531 /* KeyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMap.swift; sourceTree = "<group>"; };
+		17833EF42CC0E62400CAB531 /* NSRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRange.swift; sourceTree = "<group>"; };
+		17833EFF2CC1011800CAB531 /* main.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = main.tiff; sourceTree = "<group>"; };
+		17833F012CC1012000CAB531 /* en.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = en.tiff; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		17833EC12CC0DD2A00CAB531 /* wotedama_alphaTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = wotedama_alphaTests;
+			sourceTree = "<group>";
+		};
+		17833ECB2CC0DD2A00CAB531 /* wotedama_alphaUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = wotedama_alphaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17833EAA2CC0DD2900CAB531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17833EFB2CC0EBAA00CAB531 /* SwiftUtils in Frameworks */,
+				17833EF92CC0EBA100CAB531 /* KanaKanjiConverterModuleWithDefaultDictionary in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17833EBB2CC0DD2A00CAB531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17833EC52CC0DD2A00CAB531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17833EA42CC0DD2900CAB531 = {
+			isa = PBXGroup;
+			children = (
+				17833EE12CC0DD3100CAB531 /* wotedama_alpha */,
+				17833EC12CC0DD2A00CAB531 /* wotedama_alphaTests */,
+				17833ECB2CC0DD2A00CAB531 /* wotedama_alphaUITests */,
+				17833EF72CC0EBA100CAB531 /* Frameworks */,
+				17833EAE2CC0DD2900CAB531 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17833EAE2CC0DD2900CAB531 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17833EAD2CC0DD2900CAB531 /* wotedama_alpha.app */,
+				17833EBE2CC0DD2A00CAB531 /* wotedama_alphaTests.xctest */,
+				17833EC82CC0DD2A00CAB531 /* wotedama_alphaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17833EDC2CC0DD3100CAB531 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				17833EDB2CC0DD3100CAB531 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		17833EE12CC0DD3100CAB531 /* wotedama_alpha */ = {
+			isa = PBXGroup;
+			children = (
+				17833EE62CC0DD9300CAB531 /* Info.plist */,
+				17833EE92CC0DE1F00CAB531 /* InfoPlist.strings */,
+				17833EDF2CC0DD3100CAB531 /* wotedama.entitlements */,
+				17833EE72CC0DDCD00CAB531 /* wotedamaInputController.swift */,
+				17833EE02CC0DD3100CAB531 /* AppDelegate.swift */,
+				17833EEC2CC0DEB700CAB531 /* SocketConnection.swift */,
+				17833EDE2CC0DD3100CAB531 /* LogMessage.swift */,
+				17833EEF2CC0DF4D00CAB531 /* KeyMap */,
+				17833EEE2CC0DF4200CAB531 /* Extensions */,
+				17833EDD2CC0DD3100CAB531 /* Assets.xcassets */,
+				17833EFF2CC1011800CAB531 /* main.tiff */,
+				17833F012CC1012000CAB531 /* en.tiff */,
+				17833EDC2CC0DD3100CAB531 /* Preview Content */,
+			);
+			path = wotedama_alpha;
+			sourceTree = "<group>";
+		};
+		17833EEE2CC0DF4200CAB531 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				17833EF42CC0E62400CAB531 /* NSRange.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		17833EEF2CC0DF4D00CAB531 /* KeyMap */ = {
+			isa = PBXGroup;
+			children = (
+				17833EF02CC0E5D000CAB531 /* KeyMap+hankaku2zenkaku.swift */,
+				17833EF22CC0E5FF00CAB531 /* KeyMap.swift */,
+			);
+			path = KeyMap;
+			sourceTree = "<group>";
+		};
+		17833EF72CC0EBA100CAB531 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17833EAC2CC0DD2900CAB531 /* wotedama_alpha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17833ED22CC0DD2A00CAB531 /* Build configuration list for PBXNativeTarget "wotedama_alpha" */;
+			buildPhases = (
+				17833EA92CC0DD2900CAB531 /* Sources */,
+				17833EAA2CC0DD2900CAB531 /* Frameworks */,
+				17833EAB2CC0DD2900CAB531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wotedama_alpha;
+			packageProductDependencies = (
+				17833EF82CC0EBA100CAB531 /* KanaKanjiConverterModuleWithDefaultDictionary */,
+				17833EFA2CC0EBAA00CAB531 /* SwiftUtils */,
+			);
+			productName = wotedama_alpha;
+			productReference = 17833EAD2CC0DD2900CAB531 /* wotedama_alpha.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17833EBD2CC0DD2A00CAB531 /* wotedama_alphaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17833ED52CC0DD2A00CAB531 /* Build configuration list for PBXNativeTarget "wotedama_alphaTests" */;
+			buildPhases = (
+				17833EBA2CC0DD2A00CAB531 /* Sources */,
+				17833EBB2CC0DD2A00CAB531 /* Frameworks */,
+				17833EBC2CC0DD2A00CAB531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17833EC02CC0DD2A00CAB531 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				17833EC12CC0DD2A00CAB531 /* wotedama_alphaTests */,
+			);
+			name = wotedama_alphaTests;
+			packageProductDependencies = (
+			);
+			productName = wotedama_alphaTests;
+			productReference = 17833EBE2CC0DD2A00CAB531 /* wotedama_alphaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17833EC72CC0DD2A00CAB531 /* wotedama_alphaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17833ED82CC0DD2A00CAB531 /* Build configuration list for PBXNativeTarget "wotedama_alphaUITests" */;
+			buildPhases = (
+				17833EC42CC0DD2A00CAB531 /* Sources */,
+				17833EC52CC0DD2A00CAB531 /* Frameworks */,
+				17833EC62CC0DD2A00CAB531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17833ECA2CC0DD2A00CAB531 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				17833ECB2CC0DD2A00CAB531 /* wotedama_alphaUITests */,
+			);
+			name = wotedama_alphaUITests;
+			packageProductDependencies = (
+			);
+			productName = wotedama_alphaUITests;
+			productReference = 17833EC82CC0DD2A00CAB531 /* wotedama_alphaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17833EA52CC0DD2900CAB531 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					17833EAC2CC0DD2900CAB531 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					17833EBD2CC0DD2A00CAB531 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 17833EAC2CC0DD2900CAB531;
+					};
+					17833EC72CC0DD2A00CAB531 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 17833EAC2CC0DD2900CAB531;
+					};
+				};
+			};
+			buildConfigurationList = 17833EA82CC0DD2900CAB531 /* Build configuration list for PBXProject "wotedama_alpha" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17833EA42CC0DD2900CAB531;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				17833EF62CC0EB2700CAB531 /* XCRemoteSwiftPackageReference "AzooKeyKanaKanjiConverter" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 17833EAE2CC0DD2900CAB531 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17833EAC2CC0DD2900CAB531 /* wotedama_alpha */,
+				17833EBD2CC0DD2A00CAB531 /* wotedama_alphaTests */,
+				17833EC72CC0DD2A00CAB531 /* wotedama_alphaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17833EAB2CC0DD2900CAB531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17833EE22CC0DD3100CAB531 /* Preview Assets.xcassets in Resources */,
+				17833F022CC1012000CAB531 /* en.tiff in Resources */,
+				17833F002CC1011800CAB531 /* main.tiff in Resources */,
+				17833F0A2CC1036300CAB531 /* InfoPlist.strings in Resources */,
+				17833F0B2CC1037100CAB531 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17833EBC2CC0DD2A00CAB531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17833EC62CC0DD2A00CAB531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17833EA92CC0DD2900CAB531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17833EE52CC0DD3100CAB531 /* AppDelegate.swift in Sources */,
+				17833EF12CC0E5D300CAB531 /* KeyMap+hankaku2zenkaku.swift in Sources */,
+				17833EED2CC0DED500CAB531 /* SocketConnection.swift in Sources */,
+				17833EF52CC0E63300CAB531 /* NSRange.swift in Sources */,
+				17833EE42CC0DD3100CAB531 /* LogMessage.swift in Sources */,
+				17833EFC2CC0EC2100CAB531 /* KeyMap.swift in Sources */,
+				17833EE82CC0DDD200CAB531 /* wotedamaInputController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17833EBA2CC0DD2A00CAB531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17833EC42CC0DD2A00CAB531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17833EC02CC0DD2A00CAB531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17833EAC2CC0DD2900CAB531 /* wotedama_alpha */;
+			targetProxy = 17833EBF2CC0DD2A00CAB531 /* PBXContainerItemProxy */;
+		};
+		17833ECA2CC0DD2A00CAB531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17833EAC2CC0DD2900CAB531 /* wotedama_alpha */;
+			targetProxy = 17833EC92CC0DD2A00CAB531 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17833EE92CC0DE1F00CAB531 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17833EEA2CC0DE1F00CAB531 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17833ED02CC0DD2A00CAB531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17833ED12CC0DD2A00CAB531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		17833ED32CC0DD2A00CAB531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = wotedama_alpha/wotedama_alpha.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"wotedama_alpha/Preview Content\"";
+				DEVELOPMENT_TEAM = C362LR6XL5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "wotedama-alpha-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.A.inputmethod.wotedama;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		17833ED42CC0DD2A00CAB531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = wotedama_alpha/wotedama_alpha.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"wotedama_alpha/Preview Content\"";
+				DEVELOPMENT_TEAM = C362LR6XL5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "wotedama-alpha-Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.A.inputmethod.wotedama;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		17833ED62CC0DD2A00CAB531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C362LR6XL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "A.wotedama-alphaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wotedama_alpha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wotedama_alpha";
+			};
+			name = Debug;
+		};
+		17833ED72CC0DD2A00CAB531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C362LR6XL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "A.wotedama-alphaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wotedama_alpha.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/wotedama_alpha";
+			};
+			name = Release;
+		};
+		17833ED92CC0DD2A00CAB531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C362LR6XL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "A.wotedama-alphaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = wotedama_alpha;
+			};
+			name = Debug;
+		};
+		17833EDA2CC0DD2A00CAB531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = C362LR6XL5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "A.wotedama-alphaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = wotedama_alpha;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17833EA82CC0DD2900CAB531 /* Build configuration list for PBXProject "wotedama_alpha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17833ED02CC0DD2A00CAB531 /* Debug */,
+				17833ED12CC0DD2A00CAB531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17833ED22CC0DD2A00CAB531 /* Build configuration list for PBXNativeTarget "wotedama_alpha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17833ED32CC0DD2A00CAB531 /* Debug */,
+				17833ED42CC0DD2A00CAB531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17833ED52CC0DD2A00CAB531 /* Build configuration list for PBXNativeTarget "wotedama_alphaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17833ED62CC0DD2A00CAB531 /* Debug */,
+				17833ED72CC0DD2A00CAB531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17833ED82CC0DD2A00CAB531 /* Build configuration list for PBXNativeTarget "wotedama_alphaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17833ED92CC0DD2A00CAB531 /* Debug */,
+				17833EDA2CC0DD2A00CAB531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17833EF62CC0EB2700CAB531 /* XCRemoteSwiftPackageReference "AzooKeyKanaKanjiConverter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ensan-hcl/AzooKeyKanaKanjiConverter";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17833EF82CC0EBA100CAB531 /* KanaKanjiConverterModuleWithDefaultDictionary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17833EF62CC0EB2700CAB531 /* XCRemoteSwiftPackageReference "AzooKeyKanaKanjiConverter" */;
+			productName = KanaKanjiConverterModuleWithDefaultDictionary;
+		};
+		17833EFA2CC0EBAA00CAB531 /* SwiftUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17833EF62CC0EB2700CAB531 /* XCRemoteSwiftPackageReference "AzooKeyKanaKanjiConverter" */;
+			productName = SwiftUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 17833EA52CC0DD2900CAB531 /* Project object */;
+}
