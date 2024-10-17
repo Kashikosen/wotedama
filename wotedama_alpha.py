@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # kill -9 $(lsof -t -i:12345)
-# ベクトル化処理
+# wotedama_alpha.py
 
 import MeCab
 from transformers import AutoTokenizer, AutoModelForMaskedLM

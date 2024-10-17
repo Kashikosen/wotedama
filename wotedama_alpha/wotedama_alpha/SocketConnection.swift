@@ -9,6 +9,7 @@ import SwiftUI
 import Network
 import InputMethodKit
 
+//変換部(Python)と通信
 class SocketConnection {
     let host: NWEndpoint.Host = "127.0.0.1"
     let port: NWEndpoint.Port = 12345

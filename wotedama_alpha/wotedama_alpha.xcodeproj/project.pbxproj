@@ -17,10 +17,10 @@
 		17833EF92CC0EBA100CAB531 /* KanaKanjiConverterModuleWithDefaultDictionary in Frameworks */ = {isa = PBXBuildFile; productRef = 17833EF82CC0EBA100CAB531 /* KanaKanjiConverterModuleWithDefaultDictionary */; };
 		17833EFB2CC0EBAA00CAB531 /* SwiftUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 17833EFA2CC0EBAA00CAB531 /* SwiftUtils */; };
 		17833EFC2CC0EC2100CAB531 /* KeyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17833EF22CC0E5FF00CAB531 /* KeyMap.swift */; };
-		17833F002CC1011800CAB531 /* main.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 17833EFF2CC1011800CAB531 /* main.tiff */; };
-		17833F022CC1012000CAB531 /* en.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 17833F012CC1012000CAB531 /* en.tiff */; };
 		17833F0A2CC1036300CAB531 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17833EE92CC0DE1F00CAB531 /* InfoPlist.strings */; };
 		17833F0B2CC1037100CAB531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17833EDD2CC0DD3100CAB531 /* Assets.xcassets */; };
+		17C213632CC11DF300EF035D /* main.tif in Resources */ = {isa = PBXBuildFile; fileRef = 17C213622CC11DF300EF035D /* main.tif */; };
+		17C213652CC11E1100EF035D /* en.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 17C213642CC11E1100EF035D /* en.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 		17833EF02CC0E5D000CAB531 /* KeyMap+hankaku2zenkaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyMap+hankaku2zenkaku.swift"; sourceTree = "<group>"; };
 		17833EF22CC0E5FF00CAB531 /* KeyMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMap.swift; sourceTree = "<group>"; };
 		17833EF42CC0E62400CAB531 /* NSRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRange.swift; sourceTree = "<group>"; };
-		17833EFF2CC1011800CAB531 /* main.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = main.tiff; sourceTree = "<group>"; };
-		17833F012CC1012000CAB531 /* en.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = en.tiff; sourceTree = "<group>"; };
+		17C213622CC11DF300EF035D /* main.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = main.tif; sourceTree = "<group>"; };
+		17C213642CC11E1100EF035D /* en.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = en.tiff; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -142,8 +142,8 @@
 				17833EEF2CC0DF4D00CAB531 /* KeyMap */,
 				17833EEE2CC0DF4200CAB531 /* Extensions */,
 				17833EDD2CC0DD3100CAB531 /* Assets.xcassets */,
-				17833EFF2CC1011800CAB531 /* main.tiff */,
-				17833F012CC1012000CAB531 /* en.tiff */,
+				17C213622CC11DF300EF035D /* main.tif */,
+				17C213642CC11E1100EF035D /* en.tiff */,
 				17833EDC2CC0DD3100CAB531 /* Preview Content */,
 			);
 			path = wotedama_alpha;
@@ -296,9 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17833EE22CC0DD3100CAB531 /* Preview Assets.xcassets in Resources */,
-				17833F022CC1012000CAB531 /* en.tiff in Resources */,
-				17833F002CC1011800CAB531 /* main.tiff in Resources */,
+				17C213652CC11E1100EF035D /* en.tiff in Resources */,
 				17833F0A2CC1036300CAB531 /* InfoPlist.strings in Resources */,
+				17C213632CC11DF300EF035D /* main.tif in Resources */,
 				17833F0B2CC1037100CAB531 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,7 +508,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "wotedama-alpha-Info.plist";
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_MODULE_NAME).NSManualApplication";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -536,7 +539,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "wotedama-alpha-Info.plist";
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_MODULE_NAME).NSManualApplication";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
