@@ -41,6 +41,7 @@ sock.bind((host, port))
 class Context:
 
     def __init__(self):
+        self.file_pass = ''
         self.options = []
         self.sentences = ''
         self.sentences_mask = ''
@@ -50,25 +51,57 @@ class Context:
     def create_text_gui(self):
         # レイアウト
         layout = [
+            [sg.FileBrowse('open', key='bt_open', enable_events=True)],
             [sg.Multiline(default_text='', size=(150, 50),
-                          border_width=2, key='text1',
+                          border_width=2, key='text',
                           text_color='#000000', background_color='#ffffff')],
-            [sg.Button('read', key='bt_read'), sg.Button('clear', key='bt_clear'), sg.Button('Quit', key='bt_quit')]]
+            [sg.Button('read', key='bt_read'), sg.Button('clear', key='bt_clear'), sg.Button('save', key='bt_save'), sg.Button('quit', key='bt_quit')]]
 
         # ウィンドウ作成
-        window = sg.Window('jpIMTest06.py', layout, return_keyboard_events=True)
+        window = sg.Window('wotedama_alpha.py', layout, return_keyboard_events=True)
 
         # イベントループ
         while True:
-            event, values = window.read()  # イベントの読み取り（イベント待ち）
+            # イベントの読み取り（イベント待ち）
+            event, values = window.read()
+
+            # Quit
             if event is None or event == 'bt_quit' or event == 'q' and ('Meta_L' or 'Meta_R'):
                 break
+
+            # Read
             elif event == 'bt_read' or event == 'r' and ('Meta_L' or 'Meta_R') or event.startswith('Return'):
-                print(values['text1'])
-                self.sentences = values['text1']
+                print(values['text'])
+                self.sentences = values['text']
+
+            # Clear
             elif event == 'bt_clear' or event == 'c' and ('Meta_L' or 'Meta_R'):
-                window['text1'].update('')
+                window['text'].update('')
                 self.sentences = ''
+            
+            # Save
+            elif event == 'bt_save' or event == 's' and ('Meta_L' or 'Meta_R'):
+                # 上書き保存
+                if self.file_pass:
+                    with open(self.file_pass, 'w', encoding='UTF-8') as file:
+                        file.write(values['text'])
+                        print("上書き保存完了")
+                else:
+                    self.file_pass = sg.popup_get_file('save', save_as='True')
+                    print(self.file_pass)
+                    with open(self.file_pass, 'w', encoding='UTF-8') as file:
+                        file.write(values['text'])
+                        print("新規保存完了")
+            
+            # Open
+            elif event == 'bt_open' or event == 'o' and ('Meta_L' or 'Meta_R'):
+                self.file_pass = values['bt_open']
+
+                if self.file_pass:
+                    with open(self.file_pass, 'r', encoding='UTF-8') as file:
+                        read_text = file.read()
+                        window['text'].update(read_text)
+                        print("ファイルを開く")
 
         # 終了表示
         window.close()
