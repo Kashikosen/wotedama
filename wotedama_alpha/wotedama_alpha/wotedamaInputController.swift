@@ -20,6 +20,7 @@ let socketConnection = SocketConnection()
 var text = ""
 var logCandidatesStrings = ""
 var sortedCandidatesMessage: [String] = []
+var replaceMessage = ""
 
 //セマフォ
 var gotCandidatesSemaphore: DispatchSemaphore!
@@ -138,7 +139,7 @@ enum InputState {
                 
                 //
                 //データ送信
-                logMessage(logContents: "enter  <160行目>")
+                logMessage(logContents: "enter  <142行目>")
                 socketConnection.sendMessage(inputMessage: "enter\n")
                 //
                 //
@@ -360,9 +361,9 @@ class wotedamaInputController: IMKInputController {
     
     private func updateSocketMenuItem() {
         self.socketConnectionToggleMenuItem.title = if self.socketConnectionEnabled {
-            "ソケット通信を終了"
+            "ソケット通信チェック"
         } else {
-            "ソケット通信を開始"
+            "ソケット通信チェック"
         }
     }
     
@@ -439,7 +440,7 @@ class wotedamaInputController: IMKInputController {
         // return only false
         switch clientAction {
         case .showCandidateWindow:
-            Thread.sleep(forTimeInterval: 0.3)
+            Thread.sleep(forTimeInterval: 0.75)
             logMessage(logContents: "変換ウィンドウが現れる")
             self.showCandidateWindow()
         case .hideCandidateWindow:
@@ -471,7 +472,7 @@ class wotedamaInputController: IMKInputController {
             func TextInComposingMode() -> String {
                 return text
             }
-            logMessage(logContents: text + "  <489行目>")
+            logMessage(logContents: text + "  <475行目>")
             
         case .moveCursor(let value):
             _ = self.composingText.moveCursorFromCursorPosition(count: value)
@@ -551,7 +552,7 @@ class wotedamaInputController: IMKInputController {
         //変換結果　ログ出力，値受け渡し
         let candidatesStrings = self.rawCandidates?.mainResults.compactMap { $0.text }
         logCandidatesStrings = candidatesStrings!.joined(separator: ",")
-        logMessage(logContents: logCandidatesStrings + "  <587行目>")
+        logMessage(logContents: logCandidatesStrings + "  <555行目>")
     }
     
     
@@ -567,6 +568,7 @@ class wotedamaInputController: IMKInputController {
         //非同期で待機
         DispatchQueue.global().async {
             
+            logMessage(logContents: "通信待機")
             gotCandidatesSemaphore.wait()
             
             //メインスレッドに移行
@@ -589,8 +591,8 @@ class wotedamaInputController: IMKInputController {
                 }
             }
         }
-        Thread.sleep(forTimeInterval: 0.25)
-        logMessage(logContents: "return処理  <632行目>")
+        Thread.sleep(forTimeInterval: 0.5)
+        logMessage(logContents: "return処理  <595行目>")
         return sortedCandidatesMessage
     }
     

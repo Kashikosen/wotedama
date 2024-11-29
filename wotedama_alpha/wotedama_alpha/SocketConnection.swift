@@ -59,7 +59,7 @@ class SocketConnection {
     
     //送信
     func sendMessage(inputMessage: String) {
-        guard let payload = inputMessage.data(using: .utf8) else {
+        guard let payload = inputMessage.data(using: .utf16) else {
             logMessage(logContents: "文字列のエンコードに失敗しました")
             return
         }
@@ -76,14 +76,16 @@ class SocketConnection {
     func receiveMessage() {
         connection?.receive(minimumIncompleteLength: 1, maximumLength: 65535) { [weak self] (data: Data?, context: NWConnection.ContentContext?, isComlete: Bool, error: NWError?) in
             if let data = data, !data.isEmpty {
-                let receivedMessage = String(data: data, encoding: .utf8) ?? "不明なメッセージ"
+                let receivedMessage = String(data: data, encoding: .utf16) ?? "不明なメッセージ"
                 logMessage(logContents: "メッセージ受信: \(receivedMessage)")
                 
                 //セマフォ解放
                 gotCandidatesSemaphore.signal()
+                logMessage(logContents: "セマフォ解放")
                 
                 //クロージャ呼び出し
                 self?.candidateMessage?(receivedMessage)
+                logMessage(logContents: "クロージャ呼び出し")
                 
                 //継続して受信
                 self?.receiveMessage()

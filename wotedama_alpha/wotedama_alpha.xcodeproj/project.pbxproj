@@ -106,7 +106,6 @@
 				17833EE12CC0DD3100CAB531 /* wotedama_alpha */,
 				17833EC12CC0DD2A00CAB531 /* wotedama_alphaTests */,
 				17833ECB2CC0DD2A00CAB531 /* wotedama_alphaUITests */,
-				17833EF72CC0EBA100CAB531 /* Frameworks */,
 				17833EAE2CC0DD2900CAB531 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,13 +163,6 @@
 				17833EF22CC0E5FF00CAB531 /* KeyMap.swift */,
 			);
 			path = KeyMap;
-			sourceTree = "<group>";
-		};
-		17833EF72CC0EBA100CAB531 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
