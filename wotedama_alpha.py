@@ -31,7 +31,8 @@ moji_file_pass = '/Users/Asuka/mysite/wotedama/moji.txt'
 with open(moji_file_pass, 'r', encoding='UTF-8') as file:
     kanji = file.read()
 moji = re.compile(f'[{kanji}]+')
-hira = re.compile('[\u3041-\u309F]+')
+hira = re.compile('[\u3041-\u309F\uFF01-\uFF0F\uFF1A-\uFF20\uFF3B-\uFF40\uFF5B-\uFF65\u3000-\u303F]+')
+kata = re.compile('[\u30A1-\u30FF\uFF66-\uFF9F\uFF01-\uFF0F\uFF1A-\uFF20\uFF3B-\uFF40\uFF5B-\uFF65\u3000-\u303F]+')
 
 # Excelのロード
 wb = load_workbook('/Users/Asuka/mysite/wotedama/datasets_hinshi.xlsx', data_only=True)
@@ -282,23 +283,27 @@ class Context:
 
             if hira.fullmatch(option):
                 print("全てひらがな")
-
+            
             else:
-                if yomikata == self.typing_sentences:
-                    scores[option] = score + (sd_scores * 3)
-                    print(f"スコア修正β: {option}    {score} → {scores[option]}")
-
-                    # 文中に存在する一般名詞・固有名詞に加点 <スコア修正β'>
-                    wakati_option = tagger.parse(option)
-                    wakati_option_list = wakati_option.split()
-                    for option_list in wakati_option_list:
-                        if option_list in self.meishi_list:
-                            scores[option] = score + (sd_scores * 6)
-                            print(f"スコア修正β': {option}    {score} → {scores[option]}")
+                if kata.fullmatch(option) and len(option)>30:
+                    print("全てカタカナかつ長文")
 
                 else:
-                    #print("読み方一致せず")
-                    pass
+                    if yomikata == self.typing_sentences:
+                        scores[option] = score + (sd_scores * 3)
+                        print(f"スコア修正β: {option}    {score} → {scores[option]}")
+
+                        # 文中に存在する一般名詞・固有名詞に加点 <スコア修正β'>
+                        wakati_option = tagger.parse(option)
+                        wakati_option_list = wakati_option.split()
+                        for option_list in wakati_option_list:
+                            if option_list in self.meishi_list:
+                                scores[option] = score + (sd_scores * 6)
+                                print(f"スコア修正β': {option}    {score} → {scores[option]}")
+
+                    else:
+                        #print("読み方一致せず")
+                        pass
 
         
         # 各品詞の繋がりやすさに合わせてスコア修正 <スコア修正γ>
