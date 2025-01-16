@@ -252,9 +252,12 @@ class wotedamaInputController: IMKInputController {
             requireEnglishPrediction: false,
             keyboardLanguage: .ja_JP,
             englishCandidateInRoman2KanaInput: self.englishConversionEnabled,
-            learningType: .inputAndOutput,
-            memoryDirectoryURL: self.wotedamaMemoryDir,
-            sharedContainerURL: self.wotedamaMemoryDir,
+//            learningType: .inputAndOutput,
+//            memoryDirectoryURL: self.wotedamaMemoryDir,
+//            sharedContainerURL: self.wotedamaMemoryDir,
+            learningType: .nothing,
+            memoryDirectoryURL: URL(fileURLWithPath: "/dev/null"),
+            sharedContainerURL: URL(fileURLWithPath: "/dev/null"),
             metadata: .init(appVersionString: "1.0")
         )
     }
@@ -284,7 +287,7 @@ class wotedamaInputController: IMKInputController {
         )
         // アプリケーションサポートのディレクトリを準備しておく
         gotCandidatesSemaphore = DispatchSemaphore(value: 0)
-        self.prepareApplicationSupportDirectory()
+//        self.prepareApplicationSupportDirectory()
         self.updateLiveConversionToggleMenuItem()
         self.updateEnglishConversionToggleMenuItem()
         self.updateSocketMenuItem()
